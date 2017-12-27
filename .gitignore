@@ -16,8 +16,11 @@
 # Only allow .uasset and .umap files from /Content dir.
 # They're tracked by git-lfs, don't forget to track other
 # files if adding them here.
+# Note: add sk and .ini for skookum projects
 !/Content/**/*.uasset
 !/Content/**/*.umap
+!/Content/**/*.sk
+!/Content/**/*.ini
 
 # Allow any files from /RawContent dir.
 # Any file in /RawContent dir will be managed by git lfs.
