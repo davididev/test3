@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------------------
+// Method description...
+// 
+// Params:
+//   arg1: 
+//
+// Return Params:
+//   rarg1: 
+//
+// Returns: 
+//
+// Notes:     
+// Examples:  
+// See:       
+//---------------------------------------------------------------------------------------
+
+() 
+  [
+  // Your code here.
+  branch [_jumpRepeatedly]
+  branch [_moveAround]
+  self.@auto_receive_input = EAutoReceiveInput.@@player_0
+  self.@block_input? = false
+  ]

@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------------------
+// Coroutine description...
+// 
+// Params:
+//   arg1: 
+//
+// Return Params:
+//   rarg1: 
+//
+// Notes:     
+// Examples:  
+// See:       
+//---------------------------------------------------------------------------------------
+
+() 
+  [
+  // Your code here.
+    loop
+    [
+      _wait(0.05)
+      @move_vec.@x = self.input_axis_value("Horizontal".Name())
+      @move_vec.@y = self.input_axis_value("Vertical".Name())
+
+      !v : Vector3!xyz(0, 0, 0)
+      v = v + @capsule.forward_vector * @move_vec.@y * @move_speed
+      v = v + @capsule.right_vector * @move_vec.@x * @move_speed
+      Debug.println("MoveVec: " @move_vec " hori " self.input_axis_value("Horizontal".Name()))
+      @capsule.add_impulse(v)
+    ]
+  ]

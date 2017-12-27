@@ -1,0 +1,31 @@
+//---------------------------------------------------------------------------------------
+// Coroutine description...
+// 
+// Params:
+//   arg1: 
+//
+// Return Params:
+//   rarg1: 
+//
+// Notes:     
+// Examples:  
+// See:       
+//---------------------------------------------------------------------------------------
+
+() 
+  [
+  // Your code here.
+  !x : 0.0
+  loop
+  [
+
+    _wait(1)
+    x = x - 1000
+    !f : Vector3!xyz(0, 0, 10000)
+    println("Boing!  " f)
+
+    @capsule.add_impulse(f)
+    //@default_scene_root.@relative_location = Vector3!xyz(x, 0, 0)
+    //self.actor_relative_location_set(Vector3!xyz(x, 0, 0))
+  ]
+  ]

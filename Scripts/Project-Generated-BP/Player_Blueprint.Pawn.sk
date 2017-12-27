@@ -1,0 +1,20 @@
+// Player Blueprint
+//
+// UE4 name of this class: Player_Blueprint_C
+
+// UE4 Asset Name: Player_Blueprint
+// UE4 Package Name: "/Game/Blueprint/Player_Blueprint"
+
+annotations: &reflected_data &name("Player_Blueprint_C")
+
+$$ @
+
+/* &raw("UberGraphFrame")   PointerToUberGraphFrame !@uber_graph_frame   // Currently unsupported */
+/* &raw("SkookumScriptClassData")SkookumScriptClassDataComponent !@skookum_script_class_data // Currently unsupported */
+&raw("Capsule")          StaticMeshComponent !@capsule            // Capsule
+&raw("DefaultSceneRoot") SceneComponent      !@default_scene_root // Default Scene Root
+&raw("MoveVec")          Vector3             !@move_vec           // Move Vec
+&raw("RotateVec")        Real                !@rotate_vec         // Rotate Vec
+&raw("MOVE_SPEED")       Real                !@move_speed         // MOVE SPEED
+
+$$ .
